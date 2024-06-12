@@ -1,0 +1,115 @@
+body {
+	height: 100vh;
+	padding: 0;
+	background-color: #ddb892;
+	overflow: visible;
+
+	animation: backgroundChanger ease-in-out forwards;
+	animation-timeline: scroll();
+}
+
+nav {
+	transition: 500ms;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 5px;
+	width: 70%;
+	left: 15%;
+	height: 70px;
+	z-index: 10;
+	border: 1px solid whitesmoke;
+	background-color: rgba(245, 245, 245, 0.15);
+	&:hover {
+		background-color: rgba(245, 245, 245, 0.4);
+	}
+	border-radius: 13px;
+}
+
+#Brand {
+	color: black;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: white;
+	text-underline-offset: 4px;
+	letter-spacing: 2px;
+	font-size: 24px;
+	transform: translateY(-3px);
+}
+
+#ToolsList {
+	height: 38px;
+	width: 50%;
+	display: flex;
+	text-decoration: none;
+	list-style: none;
+	font-weight: 600;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+#ToolsList > * {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#ToolsList > li > input {
+	padding: 0;
+	width: 100%;
+	border: 1px solid whitesmoke;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+#ToolsList > li > button {
+	border: 1px solid whitesmoke;
+	border-radius: 7px;
+	background-color: rgba(245, 245, 245, 0.15);
+}
+
+.section {
+	padding: 7px;
+	background-color: rgba(245, 245, 245, 0.15);
+	border-radius: 25px;
+	border: 0.5px solid whitesmoke;
+}
+
+table > tbody > tr > td {
+	width: 10%;
+	border: 1px solid rgba(0, 0, 0, 0.192);
+	height: 33px;
+}
+
+.clockIndicator {
+	width: 5%;
+	padding: 7px;
+}
+
+.clockSpanIndicator {
+	font-size: 20px;
+}
+
+.selectible {
+	&:hover {
+		cursor: pointer;
+		background-color: rgba(245, 245, 245, 0.4);
+	}
+}
+
+@keyframes backgroundChanger {
+	to {
+		background-color: hsl(29, 41%, 65%);
+	}
+}
+
+#selectToggler {
+	transition: 500ms;
+	color: whitesmoke;
+	&:hover {
+		transform: translateY(-5px);
+		background-color: rgb(245, 245, 245);
+		color: #ddb892;
+	}
+}
